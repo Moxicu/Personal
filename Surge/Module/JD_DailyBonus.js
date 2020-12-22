@@ -58,9 +58,9 @@ function notify() {
         notify += merge[i].notify ? "\n" + merge[i].notify : ""
       }
       var Cash = merge.TotalCash && merge.TotalCash.TCash ? `${merge.TotalCash.TCash}红包` : ""
-      var beans = merge.TotalBean && merge.TotalBean.Qbear ? `${merge.TotalBean.Qbear}京豆${Steel||Cash?`, `:``}` : ""
-      var Tbean = bean ? `${bean.toFixed(0)}京豆${steel?", ":""}` : ""
-      var TCash = cash ? `${cash.toFixed(2)}红包${subsidy||money?", ":""}` : ""
+      var beans = merge.TotalBean && merge.TotalBean.Qbear ? `${merge.TotalBean.Qbear}京豆${Cash?`, `:``}` : ""
+      var Tbean = bean ? `${bean.toFixed(0)}京豆` : ""
+      var TCash = cash ? `${cash.toFixed(2)}红包` : ""
       var Ts = success ? `成功${success}个${fail||err?`, `:``}` : ``
       var Tf = fail ? `失败${fail}个${err?`, `:``}` : ``
       var Te = err ? `错误${err}个` : ``
