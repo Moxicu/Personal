@@ -1,6 +1,6 @@
-/*************************
-更新时间: 2020.12.03 17:00 v1.87
-*************************/
+var Key = ''; //单引号内自行填写您抓取的Cookie
+
+var DualKey = ''; //如需双账号签到,此处单引号内填写抓取的"账号2"Cookie, 否则请勿填写
 
 var LogDetails = false; //是否开启响应日志, true则开启
 
@@ -43,9 +43,7 @@ function notify() {
   return new Promise(resolve => {
     try {
       var bean = 0;
-      var steel = 0;
       var cash = 0;
-      var money = 0;
       var subsidy = 0;
       var success = 0;
       var fail = 0;
@@ -73,17 +71,17 @@ function notify() {
       var disa = $nobyda.disable ? "\n检测到上次执行意外崩溃, 已为您自动禁用相关接口. 如需开启请前往BoxJs ‼️‼️\n" : ""
       var DName = merge.TotalBean && merge.TotalBean.nickname ? merge.TotalBean.nickname : "获取失败"
       var Name = add ? DualAccount ? `【签到号一】:  ${DName}\n` : `【签到号二】:  ${DName}\n` : ""
-      console.log("\n" + Name + one + two + three + four + disa + notify)
+      console.log("\n" + Name + one + two + three + four + five + disa + notify)
       if ($nobyda.isJSBox) {
         if (add && DualAccount) {
           Shortcut = Name + one + two + three + "\n"
         } else if (!add && DualAccount) {
-          $intents.finish(Name + one + two + three + four + notify)
+          $intents.finish(Name + one + two + three + four + five + notify)
         } else if (typeof Shortcut != "undefined") {
           $intents.finish(Shortcut + Name + one + two + three)
         }
       }
-      if (!$nobyda.isNode) $nobyda.notify("", "", Name + one + two + three + four + disa + notify);
+      if (!$nobyda.isNode) $nobyda.notify("", "", Name + one + two + three + four + five + disa + notify);
       if (DualAccount) {
         double();
       } else {
