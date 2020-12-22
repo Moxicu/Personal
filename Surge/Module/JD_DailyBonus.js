@@ -71,17 +71,17 @@ function notify() {
       var disa = $nobyda.disable ? "\n检测到上次执行意外崩溃, 已为您自动禁用相关接口. 如需开启请前往BoxJs ‼️‼️\n" : ""
       var DName = merge.TotalBean && merge.TotalBean.nickname ? merge.TotalBean.nickname : "获取失败"
       var Name = add ? DualAccount ? `【签到号一】:  ${DName}\n` : `【签到号二】:  ${DName}\n` : ""
-      console.log("\n" + Name + one + two + three + four + five + disa + notify)
+      console.log("\n" + Name + one + two + three + four + disa + notify)
       if ($nobyda.isJSBox) {
         if (add && DualAccount) {
           Shortcut = Name + one + two + three + "\n"
         } else if (!add && DualAccount) {
-          $intents.finish(Name + one + two + three + four + five + notify)
+          $intents.finish(Name + one + two + three + four + notify)
         } else if (typeof Shortcut != "undefined") {
           $intents.finish(Shortcut + Name + one + two + three)
         }
       }
-      if (!$nobyda.isNode) $nobyda.notify("", "", Name + one + two + three + four + five + disa + notify);
+      if (!$nobyda.isNode) $nobyda.notify("", "", Name + one + two + three + four + disa + notify);
       if (DualAccount) {
         double();
       } else {
