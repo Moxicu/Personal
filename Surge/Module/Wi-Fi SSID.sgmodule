@@ -3,4 +3,4 @@
 #!system=ios
 
 [SSID Setting]
-"CMCC-SknE", "CMCC-SknE 5G" suspend=true
+"CMCC-SknE","CMCC-SknE 5G" suspend=true
