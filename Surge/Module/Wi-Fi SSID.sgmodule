@@ -1,0 +1,6 @@
+#!name=Wi-Fi SSID
+#!desc=Surge will suspend when the Wi-Fi SSID is home.
+#!system=ios
+
+[SSID Setting]
+"CMCC" suspend=true
