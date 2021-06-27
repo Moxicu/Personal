@@ -6,4 +6,4 @@
 京东签到 = type=cron,cronexp=6 20 7 * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/Moxicu/Personal/main/Surge/Module/JD_DailyBonus.js
 
 [MITM]
-hostname = %APPEND% api.m.jd.com
+hostname = api.m.jd.com
