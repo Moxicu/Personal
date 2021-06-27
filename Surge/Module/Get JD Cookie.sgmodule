@@ -1,0 +1,9 @@
+#!name=Get JD Cookie
+#!desc=Get JD Cookie
+#!system=ios
+
+[Script]
+获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+[MITM]
+hostname = %APPEND% api.m.jd.com
