@@ -2,5 +2,5 @@
 #!desc=https://github.com/privacy-protection-tools/anti-AD
 
 [Rule]
-DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt,Proxy
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-surge2.txt,REJECT
