@@ -1,5 +1,5 @@
 #!name=DNSPod DoH
-#!desc=Enable DNS over HTTPS (DoH) with DNSPod Public DNS.
+#!desc=Enable DNS over HTTPS (DoH) with DNSPod Public DNS.（频繁报错，不建议使用）
 
 [General]
 doh-server = https://doh.pub/dns-query
