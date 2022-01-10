@@ -1,5 +1,5 @@
 #!name=anti-AD
-#!desc=https://github.com/privacy-protection-tools/anti-AD
+#!desc=https://github.com/privacy-protection-tools/anti-AD（存在白名单分流问题，不建议使用）
 
 [Rule]
 DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt,Proxy
