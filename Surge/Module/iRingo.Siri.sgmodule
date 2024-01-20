@@ -1,5 +1,5 @@
 #!name=iRingo: Siri & Search v3.0.0
-#!desc=全面自定义「Siri与搜索」的功能
+#!desc=全面自定义「Siri与搜索」的功能：全局模式->飞行模式->开启WiFi->打开自带地图->等高德地图标识消失->进行一次spotlight搜索->关闭全局、飞行模式（无效重启一次）
 #!homepage=https://github.com/VirgilClyne
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Siri.png
 #!category=iRingo
