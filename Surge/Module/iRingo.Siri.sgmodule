@@ -1,1 +1,25 @@
+#!name=iRingo: Siri & Search v3.0.0
+#!desc=全面自定义「Siri与搜索」的功能。
+#!homepage=https://github.com/VirgilClyne
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Siri.png
+#!category=iRingo
 
+[Script]
+# Bag (iOS/macOS)
+Siri.bag.request = type=http-request, pattern=^https?:\/\/api(.*)\.smoot\.apple\.(com|cn)\/bag(\?.*)?$, requires-body=0, timeout=5, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri.request.js, argument=Switch=true&CountryCode=US&Domains=web,itunes,app_store,movies,restaurants,maps&Functions=flightutilities,lookup,mail,messages,news,safari,siri,spotlight,visualintelligence&Safari_Smart_History=true
+Siri.bag.response = type=http-response, pattern=^https?:\/\/api(.*)\.smoot\.apple\.(com|cn)\/bag(\?.*)?$, requires-body=1, timeout=10, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri.response.js, argument=Switch=true&CountryCode=US&Domains=web,itunes,app_store,movies,restaurants,maps&Functions=flightutilities,lookup,mail,messages,news,safari,siri,spotlight,visualintelligence&Safari_Smart_History=true
+# Spotlight & Look Up Search (iOS/macOS)
+Siri.search.request = type=http-request, pattern=^https?:\/\/api(.*)\.smoot\.apple\.(com|cn)\/search(\?.*)?$, requires-body=0, timeout=5, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri.request.js, argument=Switch=true&CountryCode=US&Domains=web,itunes,app_store,movies,restaurants,maps&Functions=flightutilities,lookup,mail,messages,news,safari,siri,spotlight,visualintelligence&Safari_Smart_History=true
+Siri.search.response = type=http-response, pattern=^https?:\/\/api(.*)\.smoot\.apple\.(com|cn)\/search(\?.*)?$, requires-body=1, timeout=10, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri.response.js, argument=Switch=true&CountryCode=US&Domains=web,itunes,app_store,movies,restaurants,maps&Functions=flightutilities,lookup,mail,messages,news,safari,siri,spotlight,visualintelligence&Safari_Smart_History=true
+# warm (unknown)
+Siri.warm.request = type=http-request, pattern=^https?:\/\/api(.*)\.smoot\.apple\.(com|cn)\/warm(\?.*)?$, requires-body=0, debug=1, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri.request.js, argument=Switch=true&CountryCode=US&Domains=web,itunes,app_store,movies,restaurants,maps&Functions=flightutilities,lookup,mail,messages,news,safari,siri,spotlight,visualintelligence&Safari_Smart_History=true
+# render (unknown)
+Siri.render.request = type=http-request, pattern=^https?:\/\/api(.*)\.smoot\.apple\.(com|cn)\/render(\?.*)?$, requires-body=0, debug=1, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri.request.js, argument=Switch=true&CountryCode=US&Domains=web,itunes,app_store,movies,restaurants,maps&Functions=flightutilities,lookup,mail,messages,news,safari,siri,spotlight,visualintelligence&Safari_Smart_History=true
+# Flight Search (iOS/macOS)
+Siri.flight.request = type=http-request, pattern=^https?:\/\/api(.*)\.smoot\.apple\.(com|cn)\/flight(\?.*)?$, requires-body=0, debug=1, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri.request.js, argument=Switch=true&CountryCode=US&Domains=web,itunes,app_store,movies,restaurants,maps&Functions=flightutilities,lookup,mail,messages,news,safari,siri,spotlight,visualintelligence&Safari_Smart_History=true
+# Siri Infomation Card (macOS)
+Siri.card.request = type=http-request, pattern=^https?:\/\/api(.*)\.smoot\.apple\.(com|cn)\/card(\?.*)?$, requires-body=0, timeout=5, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri.request.js, argument=Switch=true&CountryCode=US&Domains=web,itunes,app_store,movies,restaurants,maps&Functions=flightutilities,lookup,mail,messages,news,safari,siri,spotlight,visualintelligence&Safari_Smart_History=true
+Siri.card.response = type=http-response, pattern=^https?:\/\/api(.*)\.smoot\.apple\.(com|cn)\/card(\?.*)?$, requires-body=1, timeout=10, script-path=https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Siri.response.js, argument=Switch=true&CountryCode=US&Domains=web,itunes,app_store,movies,restaurants,maps&Functions=flightutilities,lookup,mail,messages,news,safari,siri,spotlight,visualintelligence&Safari_Smart_History=true
+
+[MITM]
+hostname = %APPEND% api*.smoot.apple.com, api*.smoot.apple.cn
