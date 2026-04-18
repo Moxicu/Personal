@@ -1,7 +1,0 @@
-#!name=Wi-Fi SSID
-#!desc=Surge will suspend when the Wi-Fi SSID is home.
-#!system=ios
-#!category=Personal
-
-[SSID Setting]
-"PENG_5G" suspend=true

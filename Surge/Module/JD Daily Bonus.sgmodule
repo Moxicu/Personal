@@ -1,9 +1,0 @@
-#!name=JD Daily Bonus
-#!desc=JD Check-in https://bean.m.jd.com
-#!system=ios
-
-[Script]
-京东签到 = type=cron,cronexp=6 20 7 * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/Moxicu/Personal/main/Surge/Module/JD_DailyBonus.js
-
-[MITM]
-hostname = api.m.jd.com
